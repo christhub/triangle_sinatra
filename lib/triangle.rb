@@ -7,13 +7,13 @@ class Triangle
 
   define_method(:triangle?) do
     if ((@side_1 + @side_2) <= @side_3) || ((@side_1 + @side_3) <= @side_2) || ((@side_2 + @side_3) <= @side_1)
-      return "NOT A TRIANGLE"
+      "It is not a triangle!"
     elsif (@side_1 == @side_2) && (@side_2 == @side_3) && (@side_3 == @side_1)
-      return "equilateral"
+      "It is an equilateral triangle."
     elsif (@side_1 == @side_2) || (@side_2 == @side_3) || (@side_1 == @side_3)
-      return "isosceles"
+      "It is an isosceles triangle."
     else
-      return "scalene"
+      "It is a scalene triangle."
     end
   end
 end
